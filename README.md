@@ -16,7 +16,7 @@ configured in the receiver application.
 Just run MultipleUPDHandler (the receiver). 
 
 - **Receiver**
-Lanch MultipleUPDHandlerTest and send some commands from the keynoard to the receicer on 
+Lanch MultipleUPDHandlerTest and send some commands from the keyboard to the receicer on 
 port 8889. Te application will send i++ continously to port 8890. 
 
 Commands will be resend to the sender applikation only.  
