@@ -26,12 +26,12 @@ Copyright (c) 2019 f41ardu(at)arcor.de
 // 11/02/2019 version 0.1
 // 
 
-// import hypermedia.net.*;
+ import hypermedia.net.*;
 
 String ip       = "localhost";  // the fixed remote IP address
 int sendtoport        = 9000;    // the destination port
 
-myUDP myUDP, secondUDP;
+UDP myUDP, secondUDP;
 
 String received = ""; 
 String received2 = ""; 
@@ -49,10 +49,12 @@ void setup() {
   font = createFont("Arial", 40);
   textFont(font, 20);
   textAlign(LEFT, CENTER);
-  myUDP = new myUDP(this, 8889 );
+  myUDP = new UDP(this, 8889 );
   myUDP.setReceiveHandler("myreceiver");
-  secondUDP = new myUDP(this, "localhost", 8890 );
+  myUDP.listen( true); 
+  secondUDP = new UDP(this, 8890 );
   secondUDP.setReceiveHandler("secondreceiver");
+  secondUDP.listen( true); 
 }
 
 void draw() {
