@@ -23,7 +23,7 @@ Copyright (c) 2019 f41ardu(at)arcor.de
 // Simple UDP based Processing application for Tello  
 // 
 // 
-// 12/01/2019 version 0.4 (experimental)
+// 12/01/2019 version 0.5 (experimental)
 // 
 
 import hypermedia.net.*;
@@ -52,9 +52,10 @@ void setup() {
   textAlign(LEFT, CENTER);
 
   // UDP setup using default handler receive
-  udp = new UDP(this ,9000 );  // create a new datagram connection on port 6000
-  udp2 = new UDP(this ,9100 );  // create a new datagram connection on port 6000
-  udp.setBuffer( 1518 );
+  udp = new UDP(this ,9000 );  // create a new datagram connection on port 9000
+  // udp 2 is a listener only
+  udp2 = new UDP(this ,9100 );  // create a new datagram connection on port 9100
+  udp.setBuffer( 1518 );        // Just for testing, use your own value
  // udp.log( true );     // <-- printout the connection activity
   udp.listen( true );           // and wait for incoming message
 
@@ -65,15 +66,15 @@ void draw() {
  
   background(0);
   // show help 
-  text("Tello Processing Demo", 30, -140, width, height);
+  text("Processing UDP Sender Demo", 30, -140, width, height);
   text("Press <ENTER> to start", 30, -110, width, height);
-  text("Tello command tested so far are:\ncommand takeoff land flip forward back left right", 30, -70, width, height);
+  text("Send some command :\ncommand takeoff land flip forward back left right", 30, -70, width, height);
   // show input 
-  text("Tello:" + textBuffer, 30, 0, width, height);
+  text("Input:" + textBuffer, 30, 0, width, height);
   // show buffer send 
-  text("Send:" + output, 30, 40, width, height);
+  text("What we send:" + output, 30, 40, width, height);
   // show what Tello tell us 
-  text("Received:" + received, 30, 80, width, height);
+  text("Eccho from receiver:" + received, 30, 80, width, height);
   String tt = " " + i++; 
   udp2.send(tt.getBytes(), ip, 8890 );   // the message to send
 

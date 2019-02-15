@@ -23,8 +23,8 @@ Copyright (c) 2019 f41ardu(at)arcor.de
 // Simple UDP Receiver Test for Processing  
 // 
 // 
-// 11/02/2019 version 0.1
-// 
+// 11/02/2019 version 0.1 (experimental)
+ // 
 
  import hypermedia.net.*;
 
