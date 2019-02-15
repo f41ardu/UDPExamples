@@ -24,7 +24,10 @@ Copyright (c) 2019 f41ardu(at)arcor.de
 // 
 // 
 // 11/02/2019 version 0.1 (experimental)
- // 
+// 
+
+// Hypermedia UDP library 
+// https://ubaa.net/shared/processing/udp/
 
  import hypermedia.net.*;
 

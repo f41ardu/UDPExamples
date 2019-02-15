@@ -26,6 +26,9 @@ Copyright (c) 2019 f41ardu(at)arcor.de
 // 12/01/2019 version 0.5 (experimental)
 // 
 
+// Hypermedia UDP library 
+// https://ubaa.net/shared/processing/udp/
+
 import hypermedia.net.*;
 
 UDP udp;  // define UDP object one
