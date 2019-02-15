@@ -79,7 +79,7 @@ void draw() {
 
 // send command as long as no response is received and input is not empty  
   if ( receivedData != true && input != "" ) { 
-    sendData();   
+    sendData(input, ip, port);   
   } else {
     // reset to input and receivedData to accept new command
     input =""; 
@@ -87,7 +87,7 @@ void draw() {
   } 
 }
 
-void sendData() {
+void sendData(String input, String ip, int port) {
   if (input != "") { 
     // udp send require byteArray
     byte[] byteBuffer = input.getBytes();
