@@ -23,8 +23,9 @@ Commands will be resend to the sender applikation only.
 
 Inspired by https://discourse.processing.org/t/udp-recreiving-multiple-ports/7516/6
 
-  **Info** 
-A new branch development is available now an will be used as longterm branch for future development. 
+- **Info** 
+
+A new branch development is available now and will be used as longterm branch for future development. 
 
 Hotfix will be used for patches 
 Feature for further feature devlopment
